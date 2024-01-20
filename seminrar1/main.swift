@@ -3,11 +3,9 @@
 //1. Вывести в консоль все чётные числа от 0 до 100, включая 0.
 print("Задача 1")
 var a = 0...100
-for num in a{
-    if num%2 == 0 {
+for num in a where num%2 == 0  {
         print(num)
     }
-}
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-
 print("-=-=-=-=-=-=-")
 
@@ -32,13 +30,11 @@ print("-=-=-=-=-=-=-")
 //   и перейдите к следующей итерации.
 print("Задача 3")
 var k=9
-for num in 10...50{
-    if num%2 == 1{
-        if (num+k)%2 == 0{
-            k+=2
-        }else{
-            print("Next")
-        }
+for num in 10...50 where num%2 == 1{
+    if (num+k)%2 == 0{
+        k+=2
+    }else{
+        print("Next")
     }
 }
 print("-=-=-=-=-=-=-")
@@ -49,14 +45,12 @@ print("-=-=-=-=-=-=-")
 //   прекратите выполнение
 print("Задача 4")
 k = 9
-for num in 10...50{
-    if num%2 == 1{
-        if (num+k)%2 == 0{
-            k+=1
-        }else{
-            print("Next")
-            break
-        }
+for num in 10...50 where num%2 == 1{
+    if (num+k)%2 == 0{
+        k+=1
+    }else{
+        print("Next")
+        break
     }
 }
 print("-=-=-=-=-=-=-")
